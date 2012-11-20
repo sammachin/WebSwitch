@@ -30,11 +30,11 @@ class start(object):
 	def on(self, var=None, **params):
 		switch = str(urllib.unquote(cherrypy.request.params['switch']))
 		mc.set(switch, "on")
-		return "ok"
+		return "Service Activated"
 	def off(self, var=None, **params):	
 		switch = str(urllib.unquote(cherrypy.request.params['switch']))
 		mc.set(switch, "off")
-		return "ok"
+		return "Service Deactivated"
 	index.exposed = True
 	state.exposed = True
 	on.exposed = True

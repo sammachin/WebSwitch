@@ -23,16 +23,19 @@
      function() {
 	   	$.post('/on', { switch: "1" }, function(data) {
 		  $("#status").html(data);
+		  setTimeout(function(){ $("#status").html("");}, 3000); 
 		});  
       },
       function() {
        	$.post('/off', { switch: "1" }, function(data) {
 		  $("#status").html(data);
+		  setTimeout(function(){ $("#status").html("");}, 3000); 
 		});
       },
       {
         switch_on_container_path: 'static/iphone_switch_container_off.png'
       });
+	 
   </script>
 
 </div>
