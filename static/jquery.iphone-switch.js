@@ -50,14 +50,14 @@ jQuery.fn.iphoneSwitch = function(start_state, switched_on_callback, switched_of
 		// click handling
 		jQuery(this).click(function() {
 			if(state == 'on') {
-				jQuery(this).find('.iphone_switch').animate({backgroundPosition: -53}, "slow", function() {
+				jQuery(this).find('.iphone_switch').animate({backgroundPosition: -53}, 400, function() {
 					jQuery(this).attr('src', settings.switch_off_container_path);
 					switched_off_callback();
 				});
 				state = 'off';
 			}
 			else {
-				jQuery(this).find('.iphone_switch').animate({backgroundPosition: 0}, "slow", function() {
+				jQuery(this).find('.iphone_switch').animate({backgroundPosition: 0}, 400, function() {
 					switched_on_callback();
 				});
 				jQuery(this).find('.iphone_switch').attr('src', settings.switch_on_container_path);
