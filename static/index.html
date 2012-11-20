@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Switch</title>
+  <link rel="stylesheet" href="style.css?v=1.0">
+  <meta name="viewport" content="width=160; height=200; initial-scale=1.5; maximum-scale=1.5; user-scalable=0;"/> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="static/phone.png"/>
+  <script src="static/jquery.js" type="text/javascript"></script>
+  <script src="static/jquery.iphone-switch.js" type="text/javascript"></script>
+</head>
+
+<body> 
+<div id="container">
+ <div class="left" id="1"></div>
+ <div id="status"></div>
+ <div class="clear"></div>
+
+  <script type="text/javascript">
+  
+    $('#1').iphoneSwitch("off", 
+     function() {
+       $("#status").html("Turned On");
+      },
+      function() {
+       $("#status").html("Turned Off");
+      },
+      {
+        switch_on_container_path: 'static/iphone_switch_container_off.png'
+      });
+  </script>
+
+</div>
+</body>
+</html>
