@@ -4,8 +4,14 @@ font-family:Verdana, Geneva, sans-serif;
 font-size:14px;}
 
 .left{
-float:left;
-width:120px;}
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -60px;
+	width:120px;
+}
+
 
 #status{
 float:left;
