@@ -36,7 +36,7 @@ class start(object):
 		switch = str(urllib.unquote(cherrypy.request.params['switch']))
 		mc.set(switch, "off")
 		return "ok"
-	imdex.exposed = True
+	index.exposed = True
 	state.exposed = True
 	on.exposed = True
 	off.exposed = True
