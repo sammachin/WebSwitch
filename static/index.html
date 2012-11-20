@@ -21,10 +21,9 @@
   
     $('#1').iphoneSwitch("off", 
      function() {
-	   	$.post('/on', { switch: "1", function(data) {
+	   	$.post('/on', { switch: "1" }, function(data) {
 		  $("#status").html(data);
-		});
-       
+		});  
       },
       function() {
        	$.post('/off', { switch: "1", function(data) {
