@@ -25,8 +25,7 @@ class start(object):
 		switch = str(urllib.unquote(cherrypy.request.params['switch']))
 		state = mc.get(switch)
 		data = {}
-		data['switch'] = []
-		data['switch'].append(state)
+		data['switch'] = state
 		return json.dumps(data)
 	def on(self, var=None, **params):
 		switch = str(urllib.unquote(cherrypy.request.params['switch']))

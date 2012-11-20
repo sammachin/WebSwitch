@@ -21,10 +21,15 @@
   
     $('#1').iphoneSwitch("off", 
      function() {
-       $("#status").html("Turned On");
+	   	$.post('/on', { switch: "1", function(data) {
+		  $("#status").html(data);
+		});
+       
       },
       function() {
-       $("#status").html("Turned Off");
+       	$.post('/off', { switch: "1", function(data) {
+		  $("#status").html(data);
+		});
       },
       {
         switch_on_container_path: 'static/iphone_switch_container_off.png'
