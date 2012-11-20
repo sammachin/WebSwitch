@@ -18,12 +18,16 @@
  <div class="clear"></div>
 
   <script type="text/javascript">
+	var state;
+	function doStuff(){
   	$.getJSON('/state', { switch: "1" }, function(result) { 
+		alert(result);
 		$.each(result, function(i, field){
 			state = field
 			}
 		);
 	});
+}
     $('#1').iphoneSwitch(state, 
      function() {
 	   	$.post('/on', { switch: "1" }, function(data) {
@@ -44,5 +48,5 @@
   </script>
 
 </div>
-</body>
+</body onload="doStuff();">
 </html>
