@@ -19,10 +19,8 @@
   <script type="text/javascript">
 	var state;
   	$.getJSON('/state', { switch: "1" }, function(result) { 
-		alert(JSON.stringify(result));
-		$.each(result, function(i, field){
-			state = field
-			}
+			state = result['switch'];
+			alert(state);
 		);
 	});
     $('#1').iphoneSwitch(state, 
