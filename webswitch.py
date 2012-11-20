@@ -40,8 +40,8 @@ class start(object):
 	on.exposed = True
 	off.exposed = True
 
-cherrypy.config.update('/server/tucore/app.cfg')
-app = cherrypy.tree.mount(start(), '/', '/server/webswitch/app.cfg')
+cherrypy.config.update(os.path.join(os.path.abspath("."), u"app.cfg"))
+app = cherrypy.tree.mount(start(), '/', os.path.join(os.path.abspath("."), u"app.cfg"))
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
                         'server.socket_port': 9010})
 
