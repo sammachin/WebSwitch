@@ -21,8 +21,8 @@
   	$.getJSON('/state', { switch: "1" }, function(result) { 
 		$.each(result, function(i, field){
 			state = field
-		}
-		
+			}
+		);
 	});
     $('#1').iphoneSwitch(state, 
      function() {
